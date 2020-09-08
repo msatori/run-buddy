@@ -12,3 +12,5 @@ https://msatori.github.io/run-buddy/
 
 ## Contribution
 Made with &#x2764; by [your name]
+
+### &copy; 2019 Run Buddy, Inc
