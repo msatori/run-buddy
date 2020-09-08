@@ -137,9 +137,6 @@ footer a {
    font-size: 16px;
 }
 /*Hero Style End*/
-.intro {
-    text-align: center;
-}
 
 .intro p {
     line-height: 1.7;
@@ -148,9 +145,9 @@ footer a {
     font-size: 20px;
     margin: 0 auto;
     padding: 0;
+    text-align: center;
 }
 .steps {
-    text-align: center;
     background: #fce138;
     padding: 0;
 }
@@ -158,10 +155,10 @@ footer a {
 .section-title {
     font-size: 55px;
     color: #024e76;
-    margin-bottom: 35px;
-    padding: 0 100px 20px 100px;
-    display: inline-block;
     border-bottom: 3px solid;
+    padding-bottom: 20px;
+    text-align: center;
+    margin: 0 auto 35px auto;
 }
 
 .primary-border {
@@ -192,7 +189,6 @@ footer a {
     font-size: 38px;
 }
 .trainers {
-    text-align: center;
     overflow: auto;
 }
 .trainer {
@@ -232,9 +228,12 @@ footer a {
 .text-right {
     text-align: right;
 }
+
+.flex-row {
+    display: flex;
+}
 /*REACH OUT STYLES START*/
 .contact {
-    text-align: center;
     background: #024e76;
 }
 .contact h2 {
