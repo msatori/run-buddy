@@ -353,18 +353,18 @@ footer a {
 }
 
 .trainer-img {
-  width: 100%;
-  min-height: 300px;
-  display: flex;
-  padding: 15px;
-  align-items: flex-end;
-  background-size: cover;
-  background-position: top;
-  overflow: hidden;
-  position: relative;
-}
-
-.trainer-img::after {
+    width: 100%;
+    min-height: 300px;
+    display: flex;
+    padding: 15px;
+    align-items: flex-end;
+    background-size: cover;
+    background-position: top;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .trainer-img::after {
     content: "";
     height: 100%;
     width: 100%;
@@ -373,27 +373,40 @@ footer a {
     position: absolute;
     top: 0;
     left: 0;
-   
-}
-
-
-.trainer-img h3 {
+    opacity: 0;
+    transition: .5s linear;
+  }
+  
+  
+  .trainer-img h3 {
     font-size: 28px;
     position: relative;
     top: 200px;
     transition-duration: .6s;
     transition-timing-function: ease-in-out;
     margin-bottom: 5px;
-    position: relative;
     z-index: 1;
-}
-
-.trainer-img h4 {
+  }
+  
+  .trainer-img h4 {
     font-weight: lighter;
     font-size: 22px;
     position: relative;
     z-index: 1;
-}  
+    top: 200px;
+    transition-duration: .6s;
+    transition-delay: .2s;
+    transition-timing-function: ease-in-out;
+  }
+  
+  .trainer:hover .trainer-img::after {
+    opacity: 1;
+  }
+  
+  .trainer:hover .trainer-img h3, .trainer:hover .trainer-img h4 {
+    transform: translateY(-200px);
+  }
+  
 
 .trainer-1 {
     background-image: url("../assets/images/trainer-1.jpg");
@@ -413,11 +426,13 @@ footer a {
 }
 .trainer-bio h3 {
     font-size: 28px;
+    display: none;
 }
 .trainer-bio h4 {
     font-weight: lighter;
     font-size: 22px;
     margin-bottom: 15px;
+    display: none;
 }
 .trainer-bio p {
     font-size: 17px;
@@ -717,6 +732,14 @@ footer a {
     section {
         padding: 30px 15px;
     }   
+    
+    .trainer-img h3, .trainer-img h4, .trainer-img::after {
+        display: none;
+    }
+
+    .trainer-bio h3, .trainer-bio h4 {
+        display: block;
+    }
   
     .step h3 {
         flex: 1 100%;
