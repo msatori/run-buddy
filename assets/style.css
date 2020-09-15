@@ -339,20 +339,65 @@ footer a {
 /*Start Trainers Section*/
 .trainers {
     width: 100%;
-    margin: auto;
+    margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
 }
+
 .trainer {
+    flex: 1;
     margin: 20px;
     color: var(--primary-color);
     background-color: var(--secondary-color);
-    flex: 1;
 }
-.trainer img {
+
+.trainer-img {
+  width: 100%;
+  min-height: 300px;
+  display: flex;
+  padding: 15px;
+  align-items: flex-end;
+  background-size: cover;
+  background-position: top;
+  overflow: hidden;
+  position: relative;
+}
+
+.trainer-img::after {
+    content: "";
+    height: 100%;
     width: 100%;
+    display: block;
+    background-image: linear-gradient(180deg, rgba(252,225,56,0.3) 0%, rgba(2,78,118,1) 100%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: .5s linear;  
 }
+
+.trainer-img h3 {
+    font-size: 28px;
+    position: relative;
+    top: 200px;
+    transition-duration: .6s;
+    transition-timing-function: ease-in-out;
+    margin-bottom: 5px;
+    z-index: 1;
+}
+.trainer-1 {
+    background-image: url("../assets/images/trainer-1.jpg");
+}
+
+.trainer-2 {
+    background-image: url("../assets/images/trainer-2.jpg");
+}
+
+.trainer-3 {
+    background-image: url("../assets/images/trainer-3.jpg");
+}
+
 .trainer-bio {
     padding: 25px;
     line-height: 1.3;
